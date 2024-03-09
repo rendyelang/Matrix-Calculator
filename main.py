@@ -73,33 +73,38 @@ def menu():
         number_of_rows_matrix_2 = int(input(f"Enter the number of rows for the second matrix : "))
         number_of_columns_matrix_2 = int(input(f"Enter the number of columns for the second matrix : "))
 
-
-        matrix_1 = []
-        for row in range(number_of_rows_matrix_1):
-            row_values = []
-            for column in range(number_of_columns_matrix_1):
-                value = int(input(f"Enter a value for the first matrix posation {row + 1},{column + 1}: " )) # We add one because the count in python starts from zero
-                row_values.append(value)
-            matrix_1.append(row_values)
-            # At the end matrix_1 will look something like this [[5,4] , [6,8] , [9,4]]
-
-        matrix_2 = []
-        for row in range(number_of_rows_matrix_2):
-            row_values = []
-            for column in range(number_of_columns_matrix_2):
-                value = int(input(f"Enter a value for the second matrix posation {row + 1},{column + 1}: " )) # We add one because the count in python starts from zero
-                row_values.append(value)
-            matrix_2.append(row_values)
-            # At the end matrix_1 will look something like this [[5,4] , [6,8]]
         
         if number_of_columns_matrix_1 == number_of_rows_matrix_2: # Check if the number of columns in the first matrix must be equal to the number of rows in the second matrix.
             # Call the multiplcation function
+            matrix_1 = []
+            for row in range(number_of_rows_matrix_1):
+                row_values = []
+                for column in range(number_of_columns_matrix_1):
+                    value = int(input(f"Enter a value for the first matrix posation {row + 1},{column + 1}: " )) # We add one because the count in python starts from zero
+                    row_values.append(value)
+                matrix_1.append(row_values)
+                # At the end matrix_1 will look something like this [[5,4] , [6,8] , [9,4]]
+
+            matrix_2 = []
+            for row in range(number_of_rows_matrix_2):
+                row_values = []
+                for column in range(number_of_columns_matrix_2):
+                    value = int(input(f"Enter a value for the second matrix posation {row + 1},{column + 1}: " )) # We add one because the count in python starts from zero
+                    row_values.append(value)
+                matrix_2.append(row_values)
+            # At the end matrix_1 will look something like this [[5,4] , [6,8]]
             result = multiply_matrices(matrix_1 , matrix_2)
             print('The multiplication result is: ')
             for row in result:
                 print(row)
         else:
             print("The number of columns in the first matrix must be equal to the number of rows in the second matrix.")
+            repeat = input("Do you want to repeat the program? (yes/no): ")
+            if repeat == "yes":
+                menu()
+            else:
+                print("Thank you for using this program")
+                exit()
 
 
     else:
