@@ -37,8 +37,23 @@ def menu():
             matrix_2.append(row_values)
             # At the end matrix_1 will look something like this [[5,4] , [6,8] , [9,4]]
 
+        print()
+        print("Matrix 1 :")
+        for row in matrix_1:
+            print(row)
+        print()
+
+        print("Matrix 2 :")
+        for row in matrix_2:
+            print(row)
+        print()
 
         # call function add_matrices here
+        print("The result is : ")
+        result = add_matrices(matrix_1 , matrix_2)
+        for row in result:
+            print(row)
+
 
     elif chose_menu == 2:
         print("You chose to subtract matrices")
@@ -64,6 +79,8 @@ def menu():
             # At the end matrix_1 will look something like this [[5,4] , [6,8] , [9,4]]
 
         # call function subtract_matrices here
+        
+        
 
     elif chose_menu == 3:
         print("You chose to multiply matrices")
@@ -118,5 +135,3 @@ def menu():
 
 
 menu()
-
-
