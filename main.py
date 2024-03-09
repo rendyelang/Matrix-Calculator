@@ -55,6 +55,3 @@ for row in range(number_of_rows):
         row_values.append(value)
     matrix_2.append(row_values)
     # At the end matrix_1 will look something like this [[5,4] , [6,8] , [9,4]]
-
-# print(matrix_1)
-# print(matrix_2)
