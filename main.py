@@ -82,11 +82,11 @@ def menu():
         # call function subtract_matrices here
         print()
         print("Matrix 1 :")
-        print_function(result)
+        print_function(matrix_1)
         print()
 
         print("Matrix 2 :")
-        print_function(result)
+        print_function(matrix_2)
         print()
 
         print("the result of matrix subtraction is : ")
@@ -126,11 +126,11 @@ def menu():
                 
             print()
             print("Matrix 1 :")
-            print_function(result)
+            print_function(matrix_1)
             print()
 
             print("Matrix 2 :")
-            print_function(result)
+            print_function(matrix_2)
             print()
             
             print("The multiplication result is: ")
@@ -155,7 +155,7 @@ def menu():
             matrix.append(row_values)
         print()
         print("The matrix you entered is :")
-        print_function(result)
+        print_function(matrix)
         print()
         # call function transpose_matrix here
         print("The transpose of the matrix is : ")
