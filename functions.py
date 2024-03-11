@@ -10,6 +10,7 @@ def add_matrices(matrix1, matrix2):
     return result
 
 def multiply_matrices(matrix1 , matrix2):
+    result = []
     # By Baraa
     result = []
     number_of_columns_matrix2 =  len(matrix2[0])
@@ -35,8 +36,8 @@ def multiply_matrices(matrix1 , matrix2):
             result_row.append(dot_product)
         result.append(result_row)
 
-    return result
 
+    return result
 
 def subtract_matrices(matrix1 , matrix2):
     # By Ahmed
@@ -47,5 +48,32 @@ def subtract_matrices(matrix1 , matrix2):
             row.append(matrix1[i][j] - matrix2[i][j])
         result.append(row)
 
+    return result
+
+def transpose_matrix(matrix):
+    # By Rendy
+    result = []
+    for i in range(len(matrix[0])):
+        row = []
+        for j in range(len(matrix)):
+            row.append(matrix[j][i])
+        result.append(row)
 
     return result
+
+def determinant_matrix(matrix):
+    # By Baraa
+    result = []
+
+
+
+    return result
+
+def inverse_matrix(matrix):
+    # By Ahmed
+    result = []
+
+
+
+    return result
+
