@@ -10,7 +10,9 @@ def menu():
     print("1. Add matrices")
     print("2. Subtract matrices")
     print("3. Multiply matrices")
-    print("4. Transpose Matrices")
+    print("4. Transpose Matrix")
+    print("5. Determinant Matrix")
+    print("6. Inverse Matrix")
     print()
 
     chose_menu = int(input("Choose a menu: "))
@@ -127,16 +129,30 @@ def menu():
                     row_values.append(value)
                 matrix_2.append(row_values)
             # At the end matrix_1 will look something like this [[5,4] , [6,8]]
+                
+            print()
+            print("Matrix 1 :")
+            for row in matrix_1:
+                print(row)
+            print()
+
+            print("Matrix 2 :")
+            for row in matrix_2:
+                print(row)
+            print()
+            
+            print("The multiplication result is: ")
             result = multiply_matrices(matrix_1 , matrix_2)
             print('The multiplication result is: ')
             for row in result:
                 print(row)
+            is_repeat_program()
         else:
             print("The number of columns in the first matrix must be equal to the number of rows in the second matrix.")
             is_repeat_program()
 
     elif chose_menu == 4:
-        print("You chose to transpose matrices")
+        print("You chose to transpose a matrix")
         number_of_rows = int(input(f"Enter the number of rows for the matrices : "))
         number_of_columns = int(input(f"Enter the number of columns for the matrices : "))
         matrix = []
@@ -157,6 +173,12 @@ def menu():
         for row in result:
             print(row)
         is_repeat_program()
+
+    elif chose_menu == 5:
+        print("You chose to determinant a matrix")
+
+    elif chose_menu == 6:
+        print("You chose to inverse a matrix")
 
     else:
         print("You typed the wrong number")
