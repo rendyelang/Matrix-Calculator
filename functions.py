@@ -77,11 +77,3 @@ def inverse_matrix(matrix):
 
     return result
 
-def is_repeat_program():
-    repeat = input("Do you want to repeat the program? (yes/no): ")
-    if repeat == "yes":
-        from main import menu
-        menu()
-    else:
-        print("Thank you for using this program")
-        exit()

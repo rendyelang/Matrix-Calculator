@@ -42,20 +42,17 @@ def menu():
 
         print()
         print("Matrix 1 :")
-        for row in matrix_1:
-            print(row)
-        print()
+        print_function(matrix_1)
 
         print("Matrix 2 :")
-        for row in matrix_2:
-            print(row)
-        print()
+        print_function(matrix_2)
+
 
         # call function add_matrices here
         print("the result of matrix addition is : ")
         result = add_matrices(matrix_1 , matrix_2)
-        for row in result:
-            print(row)
+        print_function(result)
+
         is_repeat_program()
 
 
@@ -85,19 +82,16 @@ def menu():
         # call function subtract_matrices here
         print()
         print("Matrix 1 :")
-        for row in matrix_1:
-            print(row)
+        print_function(matrix_1)
         print()
 
         print("Matrix 2 :")
-        for row in matrix_2:
-            print(row)
+        print_function(matrix_2)
         print()
 
         print("the result of matrix subtraction is : ")
         result = subtract_matrices(matrix_1 , matrix_2)
-        for row in result:
-            print(row)
+        print_function(result)
         is_repeat_program()
         
 
@@ -132,20 +126,17 @@ def menu():
                 
             print()
             print("Matrix 1 :")
-            for row in matrix_1:
-                print(row)
+            print_function(matrix_1)
             print()
 
             print("Matrix 2 :")
-            for row in matrix_2:
-                print(row)
+            print_function(matrix_2)
             print()
             
             print("The multiplication result is: ")
             result = multiply_matrices(matrix_1 , matrix_2)
             print('The multiplication result is: ')
-            for row in result:
-                print(row)
+            print_function(result)
             is_repeat_program()
         else:
             print("The number of columns in the first matrix must be equal to the number of rows in the second matrix.")
@@ -164,14 +155,12 @@ def menu():
             matrix.append(row_values)
         print()
         print("The matrix you entered is :")
-        for row in matrix:
-            print(row)
+        print_function(matrix)
         print()
         # call function transpose_matrix here
         print("The transpose of the matrix is : ")
         result = transpose_matrix(matrix)
-        for row in result:
-            print(row)
+        print_function(result)
         is_repeat_program()
 
     elif chose_menu == 5:
@@ -184,5 +173,19 @@ def menu():
         print("You typed the wrong number")
         is_repeat_program()
 
+
+def print_function(matrix):
+    for row in matrix:
+        print(row)
+    print()
+
+
+def is_repeat_program():
+    repeat = input("Do you want to repeat the program? (yes/no): ")
+    if repeat == "yes":
+        menu()
+    else:
+        print("Thank you for using this program")
+        exit()
 
 menu()
