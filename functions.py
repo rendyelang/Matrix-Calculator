@@ -49,3 +49,27 @@ def subtract_matrices(matrix1 , matrix2):
 
 
     return result
+
+def transpose_matrix(matrix):
+    # By Rendy
+    result = []
+
+
+
+    return result
+
+def determinant_matrix(matrix):
+    # By Baraa
+    result = []
+
+
+
+    return result
+
+def inverse_matrix(matrix):
+    # By Ahmed
+    result = []
+
+
+
+    return result
