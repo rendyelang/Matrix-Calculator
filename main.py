@@ -133,7 +133,6 @@ def menu():
             print_function(matrix_2)
             print()
             
-            print("The multiplication result is: ")
             result = multiply_matrices(matrix_1 , matrix_2)
             print('The multiplication result is: ')
             print_function(result)
@@ -177,7 +176,6 @@ def menu():
 def print_function(matrix):
     for row in matrix:
         print(row)
-    print()
 
 
 def is_repeat_program():
