@@ -1,3 +1,6 @@
+import numpy
+
+
 def add_matrices(matrix1, matrix2):
     result = []
     # By Rendy
@@ -63,17 +66,12 @@ def transpose_matrix(matrix):
 
 def determinant_matrix(matrix):
     # By Baraa
-    result = []
-
-
+    result = numpy.round(numpy.linalg.det(matrix), 0)
 
     return result
 
 def inverse_matrix(matrix):
     # By Ahmed
-    result = []
-
-
+    result = numpy.linalg.inv(matrix)
 
     return result
-

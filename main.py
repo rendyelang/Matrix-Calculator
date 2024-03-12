@@ -164,9 +164,56 @@ def menu():
 
     elif chose_menu == 5:
         print("You chose to determinant a matrix")
+        number_of_rows = int(input(f"Enter the number of rows for the matrices : "))
+        number_of_columns = int(input(f"Enter the number of columns for the matrices : "))
+
+        if number_of_rows == number_of_columns:
+            matrix = []
+            for row in range(number_of_rows):
+                row_values = []
+                for column in range(number_of_columns):
+                    value = int(input(f"Enter a value for the matrix posation {row + 1},{column + 1}: " ))
+                    row_values.append(value)
+                matrix.append(row_values)
+            print()
+            print("The matrix you entered is :")
+            print_function(matrix)
+            print()
+            # call function transpose_matrix here        
+            result = determinant_matrix(matrix)
+            print("The determinant of the matrix is : ")
+            print(result)
+            is_repeat_program()
+        else:
+            print('The matrix should be a squared matrx (the number of columns = the number of rows).')
+            is_repeat_program()
 
     elif chose_menu == 6:
         print("You chose to inverse a matrix")
+        number_of_rows = int(input(f"Enter the number of rows for the matrices : "))
+        number_of_columns = int(input(f"Enter the number of columns for the matrices : "))
+
+        if number_of_rows == number_of_columns:
+            matrix = []
+            for row in range(number_of_rows):
+                row_values = []
+                for column in range(number_of_columns):
+                    value = int(input(f"Enter a value for the matrix posation {row + 1},{column + 1}: " ))
+                    row_values.append(value)
+                matrix.append(row_values)
+            print()
+            print("The matrix you entered is :")
+            print_function(matrix)
+            print()
+
+            # call function transpose_matrix here        
+            result = inverse_matrix(matrix)
+            print("The inverse of the matrix is : ")
+            print_function(result)
+            is_repeat_program()
+        else:
+            print('The matrix should be a squared matrx (the number of columns = the number of rows).')
+            is_repeat_program()
 
     else:
         print("You typed the wrong number")
