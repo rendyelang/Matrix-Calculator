@@ -43,10 +43,11 @@ def menu():
         print()
         print("Matrix 1 :")
         print_function(matrix_1)
+        print()
 
         print("Matrix 2 :")
         print_function(matrix_2)
-
+        print()
 
         # call function add_matrices here
         print("the result of matrix addition is : ")
